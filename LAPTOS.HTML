@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLaptops - Tu Tienda de Portátiles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e40af;
+            color: white;
+            padding: 1rem;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #1e40af, #1e3a8a);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: white;
+            color: #1e40af;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Products */
+        .products {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .products h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            color: #1e40af;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        /* Blog */
+        .blog {
+            background-color: #f3f4f6;
+            padding: 4rem 2rem;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .date {
+            color: #1e40af;
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>TechLaptops</h1>
+            </div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Encuentra tu Laptop Ideal</h1>
+        <p>Las mejores marcas y modelos con garantía y soporte técnico especializado</p>
+        <a href="#productos" class="btn">Ver Catálogo</a>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="MacBook Pro">
+                <div class="product-info">
+                    <h3>MacBook Pro 16"</h3>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="price">$2,499</p>
+                    <button class="btn">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80" alt="Dell XPS">
+                <div class="product-info">
+                    <h3>Dell XPS 15</h3>
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <p class="price">$1,799</p>
+                    <button class="btn">Añadir al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&w=800&q=80" alt="ThinkPad">
+                <div class="product-info">
+                    <h3>ThinkPad X1 Carbon</h3>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="price">$1,599</p>
+                    <button class="btn">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="blog-container">
+            <h2>Blog de Tecnología</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80" alt="Guía de Compra">
+                    <div class="blog-content">
+                        <p class="date">15 Mar 2024</p>
+                        <h3>Guía de Compra: Cómo Elegir tu Laptop Ideal</h3>
+                        <p>Descubre los factores más importantes a considerar antes de comprar tu próxima laptop...</p>
+                        <a href="#" class="btn">Leer más →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Laptops para Diseñadores">
+                    <div class="blog-content">
+                        <p class="date">12 Mar 2024</p>
+                        <h3>Las Mejores Laptops para Diseñadores 2024</h3>
+                        <p>Comparativa de las laptops más potentes para trabajo creativo y diseño...</p>
+                        <a href="#" class="btn">Leer más →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80" alt="Mantenimiento">
+                    <div class="blog-content">
+                        <p class="date">10 Mar 2024</p>
+                        <h3>Mantenimiento Básico para tu Laptop</h3>
+                        <p>Tips y consejos para mantener tu laptop en óptimas condiciones...</p>
+                        <a href="#" class="btn">Leer más →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>TechLaptops</h4>
+                <p>Tu tienda de confianza para encontrar la laptop perfecta.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Email: info@techlaptops.com</li>
+                    <li>Teléfono: (01) 123-4567</li>
+                    <li>Dirección: Av. Principal 123</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#">GitHub</a> |
+                    <a href="#">Twitter</a> |
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 TechLaptops. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
